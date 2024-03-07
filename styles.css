@@ -1,6 +1,6 @@
 body {
   font-family: Cambria, sans-serif;
-  margin: 10px 0 0 0; /* Added top margin to create space for the nav bar */
+ 
   min-height: 100vh;
   padding: 0;
   display: flex;
@@ -27,6 +27,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
 }
+
 header {
   background-color: rgba(186, 47, 51, 1);
   color: rgba(255, 255, 255, 1);
@@ -137,4 +138,17 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+footer p {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+footer address {
+  font-style: italic;
+  font-size: 14px;
+  color: #ffffff; /* cor do texto */
+  margin-bottom: 5px;
 }
