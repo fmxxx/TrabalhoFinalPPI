@@ -12,14 +12,12 @@
       text-align: center;
     }
 
-    input[type="text"],
     input[type="password"],
     input[type="email"] {
       width: calc(100% - 10px);
       padding: 5px;
       margin-bottom: 10px;
     }
-
   </style>
 
 </head>
@@ -43,15 +41,14 @@
     <form id="registration-form">
       <h2>Formulário de Login</h2>
 
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password">
-
-      <div id="password-error" class="error-message"></div>
-
       <label for="email">E-mail:</label>
       <input type="email" id="email" name="email">
-
       <div id="email-error" class="error-message"></div>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password">
+      <div id="password-error" class="error-message"></div>
+
       <br>
       <button type="button" onclick="validateForm()">Log In</button>
     </form>

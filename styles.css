@@ -1,14 +1,32 @@
 body {
   font-family: Cambria, sans-serif;
-  margin: 0;
+  margin: 10px 0 0 0; /* Added top margin to create space for the nav bar */
+  min-height: 100vh;
   padding: 0;
-  min-height: 100vh; /* min height é mais compativel do q height */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(242, 200, 198, 1);
 }
 
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: left;
+}
+
+form {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+}
 header {
   background-color: rgba(186, 47, 51, 1);
   color: rgba(255, 255, 255, 1);
@@ -56,16 +74,6 @@ section {
   padding: 20px;
   text-align: center;
   margin-top: 120px;
-}
-
-form {
-  width: 300px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  
-  margin-top: 20px;
 }
 
 .error-message {
@@ -121,4 +129,12 @@ footer {
   width: 100%;
   bottom: 0;
   z-index: 1000;
+}
+.container {
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
