@@ -96,7 +96,7 @@
   <form id="appointmentForm" onsubmit="validateForm(event);">
     <h2>Formulário de Agendamentos</h2>
     <br>
-
+    <!-- Especialidades Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="especialidade">Especialidade médica desejada:</label>
     <select id="especialidade" name="especialidade" onchange="changeMedico()">
       <option value="1">Selecione uma Especialidade</option>
@@ -109,7 +109,7 @@
     <br>
     <span id="especialidade-error" class="error-message"></span>
     <br>
-
+    <!-- Nome dos medicos Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="medico">Nome do médico especialista:</label>
     <select id="medico" name="medico">
       <option value="">Selecione Especialidade Primeiro</option>
@@ -118,20 +118,44 @@
     <span id="medico-error" class="error-message"></span>
     <br>
 
+
     <label for="dataConsulta">Data da consulta:</label>
     <input type="date" id="dataConsulta" name="dataConsulta">
     <br>
     <span id="dataConsulta-error" class="error-message"></span>
     <br>
-
+    <!-- Horarios Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="horario">Horário disponível para consulta:</label>
     <select id="horario" name="horario">
       <option value="1">Selecione um Horário</option>
-      <option value="8">08:00</option>
-      <option value="9">09:00</option>
+      <option value="2">06:00</option>
+      <option value="3">06:30</option>
+      <option value="4">07:00</option>
+      <option value="5">07:30</option>
+      <option value="6">08:00</option>
+      <option value="7">08:30</option>
+      <option value="8">09:00</option>
+      <option value="9">09:30</option>
       <option value="10">10:00</option>
-      <!-- Adicione mais opções conforme necessário -->
+      <option value="11">10:30</option>
+      <option value="12">11:00</option>
+      <option value="13">11:30</option>
+      <option value="14">12:00</option>
+      <option value="15">12:30</option>
+      <option value="16">13:00</option>
+      <option value="17">13:30</option>
+      <option value="18">14:00</option>
+      <option value="19">14:30</option>
+      <option value="20">15:00</option>
+      <option value="21">15:30</option>
+      <option value="22">16:00</option>
+      <option value="23">16:30</option>
+      <option value="24">17:00</option>
+      <option value="25">17:30</option>
+      <option value="26">18:00</option>
+
     </select>
+
     <br>
     <span id="horario-error" class="error-message"></span>
     <br>
@@ -146,9 +170,9 @@
   </footer>
 
   <script>
-    // Função para validar o formulário
+    // Func pra validar o forumario
     function validateForm(event) {
-      // Previne o recarregamento da página
+      // Previne o recarregamento 
       event.preventDefault();
 
       // Limpa mensagens de erro anteriores
@@ -167,7 +191,7 @@
         document.getElementById('especialidade-error').textContent = 'Selecione uma especialidade';
       }
 
-      // Verifica se o campo médico está vazio ou se a especialidade não foi selecionada
+      // Verifica se o campo "medico" está vazio ou se a especialidade não foi selecionada
       if (medico === '' && especialidade !== '1') {
         document.getElementById('medico-error').textContent = 'Selecione um médico';
       }
@@ -176,18 +200,18 @@
         document.getElementById('dataConsulta-error').textContent = 'O campo Data da consulta é obrigatório';
       }
 
-      // Verifica se o horário foi selecionado
+      // Verifica se o "horario" foi selecionado
       if (horario === '1') {
         document.getElementById('horario-error').textContent = 'Selecione um horário';
       }
     }
 
-    // Função para alterar o nome do médico de acordo com a especialidade selecionada
+    // Altera o nome do medico de acordo com a especialidade (Alterar dps na pt 2)
     function changeMedico() {
       var especialidadeSelect = document.getElementById('especialidade');
       var medicoSelect = document.getElementById('medico');
 
-      // Obtém o texto da opção selecionada
+      // Pega o texto da especialidade
       var especialidadeText = especialidadeSelect.options[especialidadeSelect.selectedIndex].text;
 
       // Atualiza o nome do médico

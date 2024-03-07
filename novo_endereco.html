@@ -89,39 +89,96 @@
     <a href="login.html">Login</a>
     <a href="agendamento.html">Agendamentos</a>
   </nav>
-
   <main>
-    <fieldset>
-      <h2> Formulario de Cadastro de Endereço</h2>
+    <form id="addressForm" onsubmit="validateForm(event); return false;">
+      <h2>Formulário de Cadastro de Endereço</h2>
       <br>
 
       <label for="cep">CEP:</label>
-      <input type="text" id="cep" name="cep" required>
+      <input type="text" id="cep" name="cep">
+      <div id="cep-error" class="error-message"></div>
 
       <label for="tipoLogradouro">Tipo de Logradouro:</label>
-      <select id="tipoLogradouro" name="tipoLogradouro" required>
-        <option value="">Rua</option>
-        <option value="avenida">Avenida</option>
-        <option value="praca">Praça</option>
+      <select id="tipoLogradouro" name="tipoLogradouro">
+        <option value="">Selecione um tipo</option>
+        <option value="Rua">Rua</option>
+        <option value="Avenida">Avenida</option>
+        <option value="Praça">Praça</option>
       </select>
+      <br><br>
+      <div id="tipoLogradouro-error" class="error-message"></div>
+
 
       <label for="logradouro">Logradouro:</label>
-      <input type="text" id="logradouro" name="logradouro" required>
+      <input type="text" id="logradouro" name="logradouro">
+      <div id="logradouro-error" class="error-message"></div>
 
       <label for="bairro">Bairro:</label>
-      <input type="text" id="bairro" name="bairro" required>
+      <input type="text" id="bairro" name="bairro">
+      <div id="bairro-error" class="error-message"></div>
 
       <label for="cidade">Cidade:</label>
-      <input type="text" id="cidade" name="cidade" required>
+      <input type="text" id="cidade" name="cidade">
+      <div id="cidade-error" class="error-message"></div>
 
       <label for="estado">Estado:</label>
-      <input type="text" id="estado" name="estado" required>
-    </fieldset>
+      <input type="text" id="estado" name="estado">
+      <div id="estado-error" class="error-message"></div>
+      <br>
+
+      <button type="submit">Enviar</button>
+    </form>
   </main>
 
   <footer>
     <p>&copy; 2024 Hospital Central. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Func para validar o formulário
+    function validateForm(event) {
+      event.preventDefault(); // Impede o recarregamento da página
+
+      // Limpa mensagens de erro anteriores
+      document.querySelectorAll('.error-message').forEach(function (element) {
+        element.textContent = '';
+      });
+
+      // Obtem os valores dos campos dentro da form
+      var cep = document.getElementById('cep').value;
+      var tipoLogradouro = document.getElementById('tipoLogradouro').value;
+      var logradouro = document.getElementById('logradouro').value;
+      var bairro = document.getElementById('bairro').value;
+      var cidade = document.getElementById('cidade').value;
+      var estado = document.getElementById('estado').value;
+
+      // Verifica se os campos estão vazios
+      if (cep === '') {
+        document.getElementById('cep-error').textContent = 'O campo CEP é obrigatório';
+      }
+
+      if (tipoLogradouro === '') {
+        document.getElementById('tipoLogradouro-error').textContent = 'O campo Tipo de Logradouro é obrigatório';
+      }
+
+      if (logradouro === '') {
+        document.getElementById('logradouro-error').textContent = 'O campo Logradouro é obrigatório';
+      }
+
+      if (bairro === '') {
+        document.getElementById('bairro-error').textContent = 'O campo Bairro é obrigatório';
+      }
+
+      if (cidade === '') {
+        document.getElementById('cidade-error').textContent = 'O campo Cidade é obrigatório';
+      }
+
+      if (estado === '') {
+        document.getElementById('estado-error').textContent = 'O campo Estado é obrigatório';
+      }
+    }
+  </script>
+
 </body>
 
 </html>
