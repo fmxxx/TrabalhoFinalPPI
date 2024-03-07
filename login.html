@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-
     form {
       width: 300px;
       background-color: rgba(255, 255, 255, 0.8);
@@ -22,6 +21,9 @@
     h1 {
       text-align: center;
       margin-bottom: 20px;
+    }
+    h2 {
+      text-align: center;
     }
 
     label {
@@ -56,7 +58,6 @@
     button:hover {
       background-color: #b30000;
     }
-    
   </style>
 
 </head>
@@ -67,18 +68,19 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Galeria</a>
-    <a href="#">Cadastro</a>
-    <a href="#">Login</a>
-    <a href="#">Agendamentos</a>
+    <a href="index.html">Home</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="novo_endereco.html">Cadastro</a>
+    <a href="login.html">Login</a>
+    <a href="agendamento.html">Agendamentos</a>
   </nav>
 
   <main>
 
 
     <form id="registration-form">
-      <h1>Formulário de Cadastro</h1> <!-- Título dentro do quadrado centralizado -->
+      <h2>Formulário de Cadastro</h2>
+      <br>
 
       <label for="username">Usuário:</label>
       <input type="text" id="username" name="username">
@@ -98,38 +100,40 @@
       <button type="button" onclick="validateForm()">Cadastrar</button> <!-- Botão para cadastrar -->
     </form>
 
-    <script>
-      // Função para validar o formulário
-      function validateForm() {
-        // Limpa mensagens de erro anteriores
-        document.querySelectorAll('.error-message').forEach(function (element) {
-          element.textContent = '';
-        });
 
-        // Obtém os valores dos campos
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        var email = document.getElementById('email').value;
-
-        // Verifica se os campos estão vazios
-        if (username === '') {
-          document.getElementById('username-error').textContent = 'O campo Usuário é obrigatório';
-        }
-
-        if (password === '') {
-          document.getElementById('password-error').textContent = 'O campo Senha é obrigatório';
-        }
-
-        if (email === '') {
-          document.getElementById('email-error').textContent = 'O campo E-mail é obrigatório';
-        }
-      }
-    </script>
   </main>
 
   <footer>
     <p>&copy; 2024 Hospital Central. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Função para validar o formulário
+    function validateForm() {
+      // Limpa mensagens de erro anteriores
+      document.querySelectorAll('.error-message').forEach(function (element) {
+        element.textContent = '';
+      });
+
+      // Obtém os valores dos campos
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+
+      // Verifica se os campos estão vazios
+      if (username === '') {
+        document.getElementById('username-error').textContent = 'O campo Usuário é obrigatório';
+      }
+
+      if (password === '') {
+        document.getElementById('password-error').textContent = 'O campo Senha é obrigatório';
+      }
+
+      if (email === '') {
+        document.getElementById('email-error').textContent = 'O campo E-mail é obrigatório';
+      }
+    }
+  </script>
 </body>
 
 </html>
