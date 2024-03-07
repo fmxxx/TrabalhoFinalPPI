@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
   <title>CryptoMed</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Cambria, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f2c8c6;
     }
 
     header {
-      background-color: #005fa1;
+      background-color: #ba2f33;
       color: #fff;
       padding: 0px;
       text-align: center;
@@ -24,8 +27,9 @@
       /* Garante que o header esteja acima de outros elementos */
     }
 
+
     nav {
-      background-color: #b9dcff;
+      background-color: #d3544e;
       padding: 10px 0;
       text-align: center;
       position: fixed;
@@ -38,14 +42,14 @@
 
     nav a {
       text-decoration: none;
-      color: #005fa1;
+      color: #ffffff;
       padding: 5px 20px;
       display: inline-block;
       /* Adicionado para que o hover funcione corretamente */
     }
 
     nav a:hover {
-      background-color: #005fa1;
+      background-color: #ff6961;
       color: #fff;
       padding: 5px 20px;
       /* Mantém o mesmo espaçamento de padding durante o hover */
@@ -67,17 +71,17 @@
     }
 
     .card {
-      background-color: #f8f9fa;
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       margin: 10px;
-      border-radius: 5px;
+      border-radius: 25px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 300px;
       text-align: left;
     }
 
     footer {
-      background-color: #005fa1;
+      background-color: #ba2f33;
       color: #fff;
       font-size: 11pt;
       padding: 0px 0;
@@ -99,30 +103,38 @@
   <nav>
     <a href="#">Home</a>
     <a href="#">Sobre</a>
+    <a href="#" onclick="mostrarEspecialidades()">Especialidades</a>
     <a href="#">Serviços</a>
-    <a href="#">Especialidades</a>
     <a href="#">Contato</a>
   </nav>
 
   <section>
     <div class="container">
       <div class="card">
-        <h2>Bem-vindo ao KryptoMed</h2>
-        <p>Lorem</p>
+        <h2>Bem-vindo ao CryptoMed</h2>
+        <p>Estamos na vanguarda da medicina e do cuidado com a saúde. Combinando tecnologia avançada, expertise médica de classe mundial e uma abordagem centrada no paciente, estamos redefinindo o padrão de excelência em cuidados de saúde. Nossa missão é proporcionar a cada paciente uma experiência de cuidado excepcional, baseada em tratamentos personalizados, diagnósticos precisos e uma abordagem holística para a saúde e o bem-estar.</p>
       </div>
 
       <div class="card">
         <h2>Nossos Serviços</h2>
-        <p> Lorem
-        </p>
+        <p>A CryptoMed oferece uma gama de serviços de ponta, incluindo medicina personalizada com base em análise genética, consultas médicas remotas por meio de telemedicina, cirurgia robótica minimamente invasiva, terapias de reabilitação virtual utilizando tecnologia de realidade virtual, medicina regenerativa com terapias de células-tronco, e diagnóstico por imagem avançado com equipamentos de última geração. Nosso objetivo é proporcionar tratamentos inovadores e personalizados para cada paciente, promovendo uma recuperação mais rápida e resultados superiores.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Endereço: N° 10 Rua Tal, Bairro Tal, Uberlandia</p>
-    <p>&copy; 2024 Hospital Central. Todos os direitos reservados.</p>
+    <p>&copy; 2024 CryptoMed. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    function mostrarEspecialidades() {
+      document.getElementById("especialidades").style.display = "block";
+    }
+
+    function fecharEspecialidades() {
+      document.getElementById("especialidades").style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
