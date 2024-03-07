@@ -56,17 +56,17 @@
     }
 
     select {
-      background-color: rgba(255,255,255,0.63);
-      border: 1px solid rgba(204,204,204,1.0);
-      width: 200px;
+      background-color: rgba(255, 255, 255, 0.63);
+      border: 1px solid rgba(204, 204, 204, 1.0);
+      width: 250px;
       padding: 8px 10px;
       border-radius: 5px;
       cursor: pointer;
     }
 
     input {
-      background-color: rgba(255,255,255,0.63);
-      border: 1px solid rgba(204,204,204,1.0);
+      background-color: rgba(255, 255, 255, 0.63);
+      border: 1px solid rgba(204, 204, 204, 1.0);
       width: 180px;
       padding: 8px 10px;
       border-radius: 5px;
@@ -74,7 +74,7 @@
     }
 
     button:hover {
-      background-color: rgba(179,0,0,1.0);
+      background-color: rgba(179, 0, 0, 1.0);
     }
   </style>
 
@@ -92,46 +92,108 @@
     <a href="login.html">Login</a>
     <a href="agendamento.html">Agendamentos</a>
   </nav>
-  
-  <form id="appointmentForm">
-    <h2> Formulario de Agendamentos</h2>
+
+  <form id="appointmentForm" onsubmit="validateForm(event);">
+    <h2>Formulário de Agendamentos</h2>
     <br>
 
     <label for="especialidade">Especialidade médica desejada:</label>
-    <select id="especialidade" name="especialidade">
-      <option value="1">Cardiologia</option>
+    <select id="especialidade" name="especialidade" onchange="changeMedico()">
+      <option value="1">Selecione uma Especialidade</option>
       <option value="2">Dermatologia</option>
       <option value="3">Ginecologia</option>
+      <option value="4">Pediatria</option>
+      <option value="5">Oftalmologia</option>
+      <option value="6">Gastroenterologia</option>
     </select>
-    <br> <br>
+    <br>
+    <span id="especialidade-error" class="error-message"></span>
+    <br>
 
     <label for="medico">Nome do médico especialista:</label>
     <select id="medico" name="medico">
-      <option value="1">Dr. João</option>
-      <option value="2">Dra. Maria</option>
-      <option value="3">Dr. Carlos</option>
+      <option value="">Selecione Especialidade Primeiro</option>
     </select>
-    <br> <br>
+    <br>
+    <span id="medico-error" class="error-message"></span>
+    <br>
 
     <label for="dataConsulta">Data da consulta:</label>
     <input type="date" id="dataConsulta" name="dataConsulta">
-    <br> <br>
+    <br>
+    <span id="dataConsulta-error" class="error-message"></span>
+    <br>
 
     <label for="horario">Horário disponível para consulta:</label>
     <select id="horario" name="horario">
+      <option value="1">Selecione um Horário</option>
       <option value="8">08:00</option>
       <option value="9">09:00</option>
       <option value="10">10:00</option>
-      <!-- Opções predefinidas, não dinâmicas -->
+      <!-- Adicione mais opções conforme necessário -->
     </select>
-    <br> <br>
+    <br>
+    <span id="horario-error" class="error-message"></span>
+    <br>
+    <br>
 
     <button type="submit">Agendar Consulta</button>
+
   </form>
 
   <footer>
     <p>&copy; 2024 Hospital Central. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Função para validar o formulário
+    function validateForm(event) {
+      // Previne o recarregamento da página
+      event.preventDefault();
+
+      // Limpa mensagens de erro anteriores
+      document.querySelectorAll('.error-message').forEach(function (element) {
+        element.textContent = '';
+      });
+
+      // Obtém os valores dos campos
+      var especialidade = document.getElementById('especialidade').value;
+      var medico = document.getElementById('medico').value;
+      var dataConsulta = document.getElementById('dataConsulta').value;
+      var horario = document.getElementById('horario').value;
+
+      // Verifica se a especialidade foi selecionada
+      if (especialidade === '1') {
+        document.getElementById('especialidade-error').textContent = 'Selecione uma especialidade';
+      }
+
+      // Verifica se o campo médico está vazio ou se a especialidade não foi selecionada
+      if (medico === '' && especialidade !== '1') {
+        document.getElementById('medico-error').textContent = 'Selecione um médico';
+      }
+
+      if (dataConsulta === '') {
+        document.getElementById('dataConsulta-error').textContent = 'O campo Data da consulta é obrigatório';
+      }
+
+      // Verifica se o horário foi selecionado
+      if (horario === '1') {
+        document.getElementById('horario-error').textContent = 'Selecione um horário';
+      }
+    }
+
+    // Função para alterar o nome do médico de acordo com a especialidade selecionada
+    function changeMedico() {
+      var especialidadeSelect = document.getElementById('especialidade');
+      var medicoSelect = document.getElementById('medico');
+
+      // Obtém o texto da opção selecionada
+      var especialidadeText = especialidadeSelect.options[especialidadeSelect.selectedIndex].text;
+
+      // Atualiza o nome do médico
+      medicoSelect.innerHTML = '<option value="">Selecione um Médico</option><option value="1">Dr. Especialista em ' + especialidadeText + '</option><option value="2">Dra. Especialista em ' + especialidadeText + '</option>';
+    }
+  </script>
 </body>
 
 </html>
