@@ -8,18 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
     h2 {
       text-align: center;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
     }
 
     input[type="text"],
@@ -30,20 +20,6 @@
       margin-bottom: 10px;
     }
 
-
-
-    button {
-      background-color: rgb(109, 0, 0);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: rgba(179, 0, 0, 1.0);
-    }
   </style>
 
 </head>
@@ -65,8 +41,7 @@
 
 
     <form id="registration-form">
-      <h2>Formulário de Cadastro</h2>
-      <br>
+      <h2>Formulário de Login</h2>
 
       <label for="password">Senha:</label>
       <input type="password" id="password" name="password">
@@ -78,7 +53,7 @@
 
       <div id="email-error" class="error-message"></div>
       <br>
-      <button type="button" onclick="validateForm()">Cadastrar</button>
+      <button type="button" onclick="validateForm()">Log In</button>
     </form>
 
 

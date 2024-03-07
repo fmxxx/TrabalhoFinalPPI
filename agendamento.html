@@ -8,74 +8,10 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    form {
-      width: 300px;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 40px;
-      border-radius: 25px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
     h2 {
       text-align: center;
     }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
-      width: calc(100% - 10px);
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-
-    .error-message {
-      color: rgb(255, 0, 0);
-      font-size: 14px;
-      margin-top: -10px;
-      margin-bottom: 10px;
-    }
-
-    button {
-      background-color: rgb(109, 0, 0);
-      color: rgb(255, 255, 255);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    select {
-      background-color: rgba(255, 255, 255, 0.63);
-      border: 1px solid rgba(204, 204, 204, 1.0);
-      width: 250px;
-      padding: 8px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    input {
-      background-color: rgba(255, 255, 255, 0.63);
-      border: 1px solid rgba(204, 204, 204, 1.0);
-      width: 180px;
-      padding: 8px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: rgba(179, 0, 0, 1.0);
-    }
   </style>
 
 </head>
@@ -95,7 +31,6 @@
 
   <form id="appointmentForm" onsubmit="validateForm(event);">
     <h2>Formulário de Agendamentos</h2>
-    <br>
     <!-- Especialidades Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="especialidade">Especialidade médica desejada:</label>
     <select id="especialidade" name="especialidade" onchange="changeMedico()">
