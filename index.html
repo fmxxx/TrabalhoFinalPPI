@@ -1,30 +1,128 @@
 <!DOCTYPE html>
-
-<html lang="zxx">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <title> Pagina Principal - Clinica Santa Monica </title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoMed</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    header {
+      background-color: #005fa1;
+      color: #fff;
+      padding: 0px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      /* Garante que o header esteja acima de outros elementos */
+    }
+
+    nav {
+      background-color: #b9dcff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 75px;
+      /* Ajusta o topo considerando o cabeçalho */
+      z-index: 1000;
+      /* Garante que a nav esteja acima de outros elementos */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #005fa1;
+      padding: 5px 20px;
+      display: inline-block;
+      /* Adicionado para que o hover funcione corretamente */
+    }
+
+    nav a:hover {
+      background-color: #005fa1;
+      color: #fff;
+      padding: 5px 20px;
+      /* Mantém o mesmo espaçamento de padding durante o hover */
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+      margin-top: 120px;
+      /* Ajusta a margem superior considerando o cabeçalho e a nav */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: left;
+    }
+
+    footer {
+      background-color: #005fa1;
+      color: #fff;
+      font-size: 11pt;
+      padding: 0px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      z-index: 1000;
+      /* Garante que o footer esteja acima de outros elementos */
+    }
+  </style>
 </head>
 
 <body>
-  <h1> Clinica Santa Monica </h1>
+  <header>
+    <h1>KryptoMed</h1>
+  </header>
 
-  <h2> Conheca Nosso Trabalho</h2>
-  <p> // breve descricao</p>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Especialidades</a>
+    <a href="#">Contato</a>
+  </nav>
 
-  <img src="images/galeria/image0001.png" alt="Logomarca" width="64" height="64">
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2>Bem-vindo ao KryptoMed</h2>
+        <p>Lorem</p>
+      </div>
 
-  <h2> Nossos Valores </h2>
-  <p> Lorem </p>
+      <div class="card">
+        <h2>Nossos Serviços</h2>
+        <p> Lorem
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <img src="images/galeria/image0001.png" alt="ImagemPincipal" width="256" height="256">
-  <footer> Endereço: xxxx Telefone: xxxx</footer>
-
-  <script></script>
+  <footer>
+    <p>Endereço: N° 10 Rua Tal, Bairro Tal, Uberlandia</p>
+    <p>&copy; 2024 Hospital Central. Todos os direitos reservados.</p>
+  </footer>
 </body>
 
 </html>
