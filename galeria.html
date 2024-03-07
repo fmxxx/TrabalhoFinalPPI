@@ -11,21 +11,37 @@
   <style>
     main {
       background-color: rgba(255, 255, 255, 0.8);
-      /* Branco */
       padding: 20px;
-      margin-top: 100px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      /* Adjust the margin-bottom value as needed */
       border-radius: 25px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 80%;
-      margin-bottom: 0;
+
     }
 
     table {
-      padding: 2%;
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    table td {
-      margin: 20px;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    td {
+      padding: 5px;
+      /* Add padding around each table cell */
+    }
+
+    @media screen and (max-width: 768px) {
+      table {
+        display: block;
+      }
     }
 
     br {
@@ -34,7 +50,7 @@
 
     h2,
     hr {
-      color: black;
+      color: rgb(0, 0, 0);
     }
   </style>
 </head>
@@ -62,9 +78,13 @@
 
 
   <main>
-    <h2>Galeria</h2>
+    <h2> Nossa Equipe</h2>
+
+    <img src="images/galeria/image0001.png" alt="Imagem01" width="256" height="256">
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, illum excepturi eaque doloribus iste corporis dolor qui et omnis soluta labore.</p>
+
+    <h2> Nossos Consultorios </h2>
 
     <table>
       <tr>
@@ -73,6 +93,9 @@
         <td><img src="images/galeria/image0001.png" alt="Imagem03" width="256" height="256"></td>
         <td><img src="images/galeria/image0001.png" alt="Imagem04" width="256" height="256"></td>
       </tr>
+
+
+
       <tr>
         <td><img src="images/galeria/image0001.png" alt="Imagem05" width="256" height="256"></td>
         <td><img src="images/galeria/image0001.png" alt="Imagem06" width="256" height="256"></td>
@@ -81,6 +104,11 @@
         <td><img src="images/galeria/image0001.png" alt="Imagem08" width="256" height="256"></td>
       </tr>
     </table>
+
+    <h2> Nossa Recepção </h2>
+    <img src="images/galeria/image0001.png" alt="Imagem01" width="256" height="256">
+
+
   </main>
 
   <footer>
