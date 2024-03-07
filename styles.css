@@ -1,6 +1,6 @@
 body {
   font-family: Cambria, sans-serif;
- 
+  margin: 10px 0 0 0;
   min-height: 100vh;
   padding: 0;
   display: flex;
@@ -27,7 +27,6 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
 }
-
 header {
   background-color: rgba(186, 47, 51, 1);
   color: rgba(255, 255, 255, 1);
@@ -37,6 +36,10 @@ header {
   width: 100%;
   top: 0;
   z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header h1 {
@@ -86,7 +89,7 @@ section {
 select {
   background-color: #ffffffa1;
   border: 1px solid #ccc;
-  width: 270px;
+  width: 97%;
   padding: 8px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -100,7 +103,7 @@ label {
 input {
   background-color: #ffffffa1;
   border: 1px solid #ccc;
-  width: 250px;
+  width: 90%;
   padding: 8px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -131,15 +134,6 @@ footer {
   bottom: 0;
   z-index: 1000;
 }
-.container {
-  max-width: 1200px;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 footer p {
   font-style: italic;
   font-size: 14px;
@@ -151,4 +145,18 @@ footer address {
   font-size: 14px;
   color: #ffffff; /* cor do texto */
   margin-bottom: 5px;
+}
+.container {
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#logo {
+  width: 50px; /* Ajuste conforme necessário */
+  margin-right: 10px; /* Ajuste conforme necessário */
+  margin-bottom: 10px;
 }

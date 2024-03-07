@@ -11,13 +11,20 @@
     h2 {
       text-align: center;
     }
+
+    br {
+      margin-bottom: 20px;
+    }
   </style>
 
 </head>
 
 <body>
   <header>
-    <h1>CryptoMed</h1>
+    <img src="images/CryptomedLogo.png" alt="Logomarca CryptoMed" id="logo">
+    <div>
+      <h1>CryptoMed</h1>
+    </div>
   </header>
 
   <nav>
@@ -40,24 +47,21 @@
       <option value="5">Oftalmologia</option>
       <option value="6">Gastroenterologia</option>
     </select>
-    <br>
     <span id="especialidade-error" class="error-message"></span>
-    <br>
+
     <!-- Nome dos medicos Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="medico">Nome do médico especialista:</label>
     <select id="medico" name="medico">
       <option value="">Selecione Especialidade Primeiro</option>
     </select>
-    <br>
     <span id="medico-error" class="error-message"></span>
-    <br>
+
 
 
     <label for="dataConsulta">Data da consulta:</label>
     <input type="date" id="dataConsulta" name="dataConsulta">
-    <br>
     <span id="dataConsulta-error" class="error-message"></span>
-    <br>
+
     <!-- Horarios Estatico por enquanto, fazer dinamico na pt2 -->
     <label for="horario">Horário disponível para consulta:</label>
     <select id="horario" name="horario">
@@ -87,12 +91,8 @@
       <option value="24">17:00</option>
       <option value="25">17:30</option>
       <option value="26">18:00</option>
-
     </select>
-
-    <br>
     <span id="horario-error" class="error-message"></span>
-    <br>
     <br>
 
     <button type="submit">Agendar Consulta</button>
@@ -100,7 +100,7 @@
   </form>
 
   <footer>
-    <p> Whatsapp: (34) 91234-5678, Telefone Fixo: (34) 9876-5432, E-mail: contano@cryptomed.com</p>
+    <p> Whatsapp: (34) 91234-5678 | Telefone: (34) 9876-5432 | E-mail: contato@cryptomed.com</p>
     <address> Rua Tal, Bairro Santa Monica, Uberlandia - MG </address>
   </footer>
   <script>
