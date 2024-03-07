@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Login - CryptoMed</title>
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -12,7 +12,8 @@
       font-family: Cambria, sans-serif;
       margin: 0;
       padding: 0;
-      height: 90vh;
+      min-height: 100vh;
+      /* Use min-height instead of height for better compatibility */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,25 +23,26 @@
     header {
       background-color: #ba2f33;
       color: #fff;
-      padding: 0px;
+      padding: 10px 0;
       text-align: center;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 999;
-      /* Garante que o header esteja acima de outros elementos */
+    }
+
+    header h1 {
+      margin-top: 0;
     }
 
     nav {
       background-color: #d3544e;
-      padding: 10px 0;
+      padding: 8px 0;
       text-align: center;
       position: fixed;
       width: 100%;
-      top: 75px;
-      /* Ajusta o topo considerando o cabeçalho */
+      top: 60px;
       z-index: 1000;
-      /* Garante que a nav esteja acima de outros elementos */
     }
 
     nav a {
@@ -48,21 +50,16 @@
       color: #ffffff;
       padding: 5px 20px;
       display: inline-block;
-      /* Adicionado para que o hover funcione corretamente */
     }
 
     nav a:hover {
       background-color: #ff6961;
-      color: #fff;
-      padding: 5px 20px;
-      /* Mantém o mesmo espaçamento de padding durante o hover */
     }
 
     section {
       padding: 20px;
       text-align: center;
       margin-top: 120px;
-      /* Ajusta a margem superior considerando o cabeçalho e a nav */
     }
 
     form {
@@ -71,6 +68,8 @@
       padding: 40px;
       border-radius: 25px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: auto;
+      /* Center the form horizontally */
     }
 
     h1 {
@@ -86,7 +85,7 @@
     input[type="text"],
     input[type="password"],
     input[type="email"] {
-      width: 100%;
+      width: calc(100% - 10px);
       padding: 5px;
       margin-bottom: 10px;
     }
@@ -115,13 +114,13 @@
       background-color: #ba2f33;
       color: #fff;
       font-size: 11pt;
-      padding: 0px 0;
+      padding: 10px 0;
+      /* Add padding for better spacing */
       text-align: center;
       position: fixed;
       width: 100%;
       bottom: 0;
       z-index: 1000;
-      /* Garante que o footer esteja acima de outros elementos */
     }
   </style>
 
@@ -129,7 +128,7 @@
 
 <body>
   <header>
-    <h1>Login</h1>
+    <h1>CryptoMed</h1>
   </header>
 
   <nav>
@@ -139,7 +138,7 @@
     <a href="#">Login</a>
     <a href="#">Agendamentos</a>
   </nav>
-  
+
   <main>
 
 

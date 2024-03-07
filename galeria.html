@@ -4,19 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> CryptoMed</title>
+  <title> Galeria - CryptoMed </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      margin: 0;
+   body {
       font-family: Cambria, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      /* Use min-height instead of height for better compatibility */
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
       background-color: #f2c8c6;
-      /* Vermelho claro */
     }
 
     br {
@@ -26,7 +28,8 @@
     header {
       background-color: #ba2f33;
       color: #fff;
-      padding: 0px;
+      padding: 10px 0;
+      /* Added padding to create space above and below the title */
       text-align: center;
       position: fixed;
       width: 100%;
@@ -35,18 +38,24 @@
       /* Garante que o header esteja acima de outros elementos */
     }
 
+    header h1 {
+      margin-top: 0px;
+      /* Adjusted margin to move the title a little bit more up */
+    }
 
     nav {
       background-color: #d3544e;
-      padding: 10px 0;
+      padding: 8px 0;
       text-align: center;
       position: fixed;
       width: 100%;
-      top: 75px;
+      top: 60px;
+      /* Adjusted top value to align with the header */
       /* Ajusta o topo considerando o cabeçalho */
       z-index: 1000;
       /* Garante que a nav esteja acima de outros elementos */
     }
+
 
     nav a {
       text-decoration: none;
@@ -90,7 +99,8 @@
       margin: 20px;
     }
 
-    h2, hr {
+    h2,
+    hr {
       color: black;
     }
 
@@ -151,7 +161,6 @@
         <td><img src="images/galeria/image0001.png" alt="Imagem08" width="256" height="256"></td>
       </tr>
     </table>
-    <hr>
   </main>
 
   <footer>
